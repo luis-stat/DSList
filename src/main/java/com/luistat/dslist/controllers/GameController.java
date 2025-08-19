@@ -11,7 +11,7 @@ import com.luistat.dslist.dto.GameListDTO;
 import com.luistat.dslist.services.GameListService;
 
 @RestController
-@RequestMapping(value = "/lists")
+@RequestMapping(value = "/games")
 public class GameController {
 	
 	@Autowired
@@ -19,10 +19,8 @@ public class GameController {
 	
 	@GetMapping
 	public List<GameListDTO> findAll(){
-		
 		List<GameListDTO> result = gameListService.findAll();
 		return result;
-		
 	}
 	
 }
